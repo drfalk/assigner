@@ -1,6 +1,6 @@
 
 from assigner.handler import RequestHandler
-from assigner.provider import provider
+from assigner import provider
 from assigner.server import Server
 
 if __name__ == "__main__":
