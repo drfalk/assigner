@@ -12,12 +12,25 @@ watch: poetry_install
 run: poetry_install
 	poetry run python assigner/app.py
 
+wait_for_program_load:
+	for sec in $(shell seq 1 10); do sleep 1; echo $${sec}; done
+
 k6_test:
 	k6 run k6/test.js
 
+wait_perf_test:
+	make wait_for_program_load
+	make k6_test
+
 curl_test:
-	for sec in $(shell seq 1 10); do sleep 1; echo $${sec}; done
 	curl http://localhost:8000/
 
+wait_curl_test:
+	make wait_for_program_load
+	make curl_test
+
 e2e_test: 
-	make -j 2 run curl_test
+	make -j 2 run wait_curl_test
+
+perf_test:
+	make -j 2 run wait_perf_test
