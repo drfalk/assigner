@@ -1,5 +1,8 @@
 
 
 enable_add_network_delay = True
-enable_use_select_for_update_query = True
-enable_use_stored_procedure_to_select_and_update = True
+enable_use_select_for_update_query = False
+enable_use_stored_procedure_to_select_and_update = False
+enable_preloading_of_uuids_to_provider = True
+enable_use_preloaded_uuids = True
+enable_synchronous_update_when_using_preloaded_uuid = True

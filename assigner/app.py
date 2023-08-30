@@ -4,7 +4,7 @@ from assigner import provider
 from assigner.server import Server
 
 if __name__ == "__main__":
-  provider.load_uuids()
+  provider.create_uuids()
   server_address = ('', 8000)
   httpd = Server(server_address, RequestHandler)
   print('Server Running')
