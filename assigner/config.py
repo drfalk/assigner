@@ -2,3 +2,4 @@
 
 enable_add_network_delay = True
 enable_use_select_for_update_query = True
+enable_use_stored_procedure_to_select_and_update = True
