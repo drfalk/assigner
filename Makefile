@@ -6,3 +6,6 @@ unit_test: poetry_install
 
 run: poetry_install
 	poetry run watchfiles 'python assigner/app.py'
+
+k6_test:
+	k6 run k6/test.js

@@ -1,6 +1,4 @@
-Unit test `make unit_test`
-
-Run app `make run`
+See Makefile for different operations.
 
 todo:
 * design pattern for request routes
